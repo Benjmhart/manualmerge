@@ -20,13 +20,16 @@ extra-source-files:
 description:         Please see the README on GitHub at <https://github.com/githubuser/manualmerge#readme>
 
 dependencies:
-- base >= 4.7 && < 5
+- base == 4.12.0.0
 
 library:
   source-dirs: src
+  dependencies:
+    - base-prelude
+    - process
 
 executables:
-  manualmerge-exe:
+  manualmerge:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
